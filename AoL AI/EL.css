@@ -1,0 +1,158 @@
+/*Navbar*/
+.navbar {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+
+/* CAROUSEL */
+.carousel {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* CAROUSEL IMAGE */
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  height: 400px;
+}
+
+/* OVERLAY */
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 16px 18px; /* ⬅ sedikit diperkecil */
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  z-index: 10;
+}
+
+/* JUDUL */
+.overlay-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+
+  margin: 10px 0 12px; /* ⬅ jarak aman */
+}
+
+/* INPUT */
+.overlay-input {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* RESULT CIRCLE */
+.result-circle {
+  width: 100px;
+  height: 100px; /* ⬅ sedikit dikecilkan */
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid #0d6efd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 6px;
+}
+
+/* ANGKA / STATUS */
+.result-value {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* KETERANGAN */
+.result-text {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 12px; /* ⬅ tambah jarak ke judul */
+  text-align: center;
+}
+
+
+/* Animasi hujan */
+.rain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 150px; /* tinggi area hujan */
+  pointer-events: none; /* supaya tidak mengganggu klik */
+  overflow: hidden;
+  z-index: 20; /* pastikan di atas gelombang */
+}
+
+.drop {
+  position: absolute;
+  top: -20px; /* mulai dari atas */
+  width: 2px;
+  height: 10px;
+  background: rgba(173,216,230,0.7);
+  border-radius: 50%;
+  animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(160px); opacity: 0; }
+}
+
+
+
+
+/* Animasi banjir */
+.flood-animation {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  background: #cce7ff; /* langit/air */
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100px;
+  top: 50px;
+  left: 0;
+  background: rgba(0,123,255,0.5);
+  border-radius: 43%;
+  animation: waveMove 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.wave2 {
+  top: 60px;
+  background: rgba(0,123,255,0.3);
+  animation: waveMove 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.wave3 {
+  top: 70px;
+  background: rgba(0,123,255,0.2);
+  animation: waveMove 18s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
